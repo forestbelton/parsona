@@ -10,5 +10,11 @@
   },
   "dependencies": {
   },
+  "devDependencies": {
+    "nodeunit": "0.8.6"
+  },
+  "scripts": {
+    "test": "nodeunit tests"
+  },
   "license": "MIT"
 }
