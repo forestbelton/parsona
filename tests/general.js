@@ -3,6 +3,12 @@ var P = require('parsona');
 var a = P.string('a'),
     b = P.string('b');
 
+exports['seq'] = function(test) {
+  test.expect(1);
+  test.deepEqual(P.seq([a, b]).parse('ab'), ['a', 'b']);
+  test.done();
+};
+
 exports['.or'] = function(test) {
   test.expect(3);
   test.strictEqual(a.or(b).parse('a'), 'a');
