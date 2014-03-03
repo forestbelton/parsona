@@ -9,6 +9,14 @@ exports['seq'] = function(test) {
   test.done();
 };
 
+exports['.many'] = function(test) {
+  test.expect(3);
+  test.deepEqual(a.many().parse(''), []);
+  test.deepEqual(a.many().parse('a'), ['a']);
+  test.deepEqual(a.many().parse('aa'), ['a', 'a']);
+  test.done();
+};
+
 exports['.or'] = function(test) {
   test.expect(3);
   test.strictEqual(a.or(b).parse('a'), 'a');
