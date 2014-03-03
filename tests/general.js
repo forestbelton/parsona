@@ -3,6 +3,12 @@ var P = require('parsona');
 var a = P.string('a'),
     b = P.string('b');
 
+exports['succeed'] = function(test) {
+  test.expect(1);
+  test.strictEqual(P.succeed(42).parse(''), 42);
+  test.done();
+};
+
 exports['seq'] = function(test) {
   test.expect(1);
   test.deepEqual(P.seq([a, b]).parse('ab'), ['a', 'b']);
