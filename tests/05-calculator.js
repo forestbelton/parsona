@@ -1,4 +1,4 @@
-var P = require('parsona');
+var P = require('../lib/parsona');
 
 var num = P.regex(/[0-9]+/).map(function(s) {
   return parseInt(s, 10);

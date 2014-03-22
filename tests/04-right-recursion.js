@@ -1,4 +1,4 @@
-var P = require('parsona');
+var P = require('../lib/parsona');
 
 var a    = P.string('a');
 var expr = P.lazy(function() {
